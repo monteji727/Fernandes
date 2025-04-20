@@ -17,11 +17,111 @@ public class PrograminhaDosManos {
      */
     public static void main(String[] args) {
         
+         Scanner scanner = new Scanner(System.in);
+
+	 /******************************************************************************************************************************/
+         /**************************************************** Atividade 01 ************************************************************/
+
+	 System.out.println("Leia dois numeros inteiros, calcule a media aritmetica simples entre eles e exiba o valor.");
+
+	 System.out.print("O primeiro valor: "); 
+	 int media_art_val1 = scanner.nextDouble();
+
+	 System.out.print("O Segundo valor: "); 
+	 int media_art_val2 = scanner.nextDouble();
+	 
+	 double media_art_result = (double) (media_art_val1 + media_art_val2) / 2.0;
+	
+
+         /******************************************************************************************************************************/
+         /**************************************************** Atividade 02 ************************************************************/
+	
+	 System.out.println("Leia dois numeros inteiros, calcule a media aritmetica ponderada entre eles, considerando os pesos 2.5 e "+
+         "3.5,  respectivamente e exiba o valor");
+
+	 System.out.print("O primeiro valor (peso 2.5): ");
+	 double media_art_pon_val1 = scanner.nextDouble();
+
+	 System.out.print("O segundo valor (peso 3.5): ");
+	 double media_art_pon_val2 = scanner.nextDouble();
+
+	 double media_art_pon_result = ((media_art_pon_val1 * 2.5) + (media_art_pon_val2*3.5)) / (2.5 + 3.5);
+
+	 System.out.print("O resultado é: " + media_art_pon_result);
+
+         /******************************************************************************************************************************/
+         /**************************************************** Atividade 03 ************************************************************/
+
+	 System.out.println("Leia o salario base de um vendador e o valortotal de suas vendas no mes. Calcule o salario final, sabendo " +
+		"que e igual ao valor do salario base adicionado de uma comissao de 15% sobre o valor total de suas vendas");
+
+	 System.out.print("Digite o salario base do vendedor: ");
+	 double salario_vendedor_fixo = scanner.nextDouble();
+
+	 System.out.print("Digite o total de vendas no mes desse vendedor");
+	 int vendas_vendedor = scanner.nextInt();
+
+	 double salario_vendedor_total = (vendas_vendedor * (3.0 / 20)) + salario_vendedor_fixo;
+	 System.out.prinln("O salario final foi: " + salario_vendedor_total);
+
+         /******************************************************************************************************************************/
+         /**************************************************** Atividade 04 ************************************************************/
+
+	 System.out.println("Um motorista dirigiu uma distancia, em quilometros, durante um periodo de alguns minutos. Escreva um " + 
+		 "algoritmo que solicite esses dois valores e calcule a velocidade media do deslocamento em km/h");
+
+	 System.out.print("A distancia percorriada, em quilometros: ");
+	 double quilometros_motorista = scanner.nextDouble();
+
+	 System.out.print("A quantidade de minutos gastos nesse trajeto: ");
+	 double minutos_motorista = scanner.nextDouble();
+
+	 double horas_motorita = minutos_motorista / 60;
+	 double velocidade_motorista = quilometros_motorista / horas_motorista;
+	 System.out.println("A velocidade, em km/h, e de: " + velocidade_motorista);
+
+         /******************************************************************************************************************************/
+         /**************************************************** Atividade 05 ************************************************************/
+
+	 System.out.println("Um ciclista precidsa percorrer uma distancia, em quilometros, e sabe qual velocidade media vai empreender "+ 
+		"nesse trecho. Escreva um algoritmo que solicite esses dois valores e calcule o tempo necessario (em horas) para esse " +
+		"deslocamento.");
+
+	 System.out.print("Digite a velocidade media em km/h: ");
+	 double km_h_ciclista = scanner.nextDouble();
+
+	 System.out.print("Digite a quantidade de quilometros que serao percorridos: ");
+	 double km_per_ciclista = scanner.nextDouble();
+
+	 double horas_nescessarias = km_per_ciclista / km_h_ciclista;
+	 System.out.println("A quantidade de horas que o trajeto demora sera: " + horas_necessarias);
+
+         /******************************************************************************************************************************/
+         /**************************************************** Atividade 06 ************************************************************/
+
+	 System.out.println("Uma patrulha de escoteiros anda numa trilha com uma velocidade aproximadamente constante durante um dado "+
+		 "intervalo de tempo. Escreva um algoritmo que, conhecendo a veloidade e o tempo, calcule a distancia percorrida pela "+
+		 "patrulha.");
+
+	 System.out.print("Digite a velocidade media dessa patrulha (em km/h): ");
+	 double vel_media_patrulha = scanner.nextDouble();
+
+	 System.out.print("Digite o tempo usado nessa patrulha (em horas): ");
+	 double horas_patrulha = scanner.nextDouble();
+
+	 double caminhos_percorrido_patrulha = (vel_media_patrulha * horas_patrulha);
+	 System.out.println("O tempo gasto foi de (em horas): " + horas_patrulha);
+
+         /******************************************************************************************************************************/
+         /**************************************************** Atividade 07 ************************************************************/
+	
+	System.out.println("Veja no PDF, não vou escrever tudo isso não, pelo amor de Deus.");
+	
+
          /******************************************************************************************************************************/
          /**************************************************** Atividade 12 ************************************************************/
         
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("""
+         System.out.println("""
                     Uma empresa de produtos esportivos realizar\u00e1 uma a\u00e7\u00e3o de marketing que consiste em
                     instalar  uma tirolesa entre os dois pr\u00e9dios do centro da cidade. Conhecendo a altura (em metros) dos
                     pr\u00e9dios e a dist\u00e2ncia entre eles, escreva um algoritmo para calcular a extens\u00e3o da tirolesa.
@@ -29,14 +129,14 @@ public class PrograminhaDosManos {
                     \u00e9 calculada utilizando uma fun\u00e7\u00e3o: Math.sqrt(valor) )"""
           );
         
-        System.out.print("Digite a altura, em metros, de diferença entre os dois prédios: ");
-        double altura_diferenca_predios =  scanner.nextDouble();
+         System.out.print("Digite a altura, em metros, de diferença entre os dois prédios: ");
+         double altura_diferenca_predios =  scanner.nextDouble();
          System.out.print("Distância absoluta entre os dois prédios");
          double distancia_prédios = scanner.nextDouble(); 
 
-          double tamanho_cabo_min =                                                             // hipotenusa
+         double tamanho_cabo_min =                                                           // hipotenusa
                   Math.sqrt(
-                          altura_diferenca_predios * altura_diferenca_predios        // cateto1^2 +
+                          altura_diferenca_predios * altura_diferenca_predios  		     // cateto1^2 +
                           + distancia_prédios * distancia_prédios                            // cateto2^2
                   
                     );
@@ -155,6 +255,24 @@ public class PrograminhaDosManos {
           
          /******************************************************************************************************************************/
          /**************************************************** Atividade 17 ************************************************************/
+         
+         System.out.println("""
+                    Um congresso vai emitir certificado para um participante se ele estiver presente pelo menos 75%
+                    das horas. O usu\u00e1rio vai informar quantas horas tem o congresso no total e quantas horas o
+                    participante compareceu. O n\u00famero de horas \u00e9 sempre inteiro."""
+         );
+         
+         System.out.print("A quantidade de horas total do congresso (somente inteiros): ");
+         int horas_total_congresso = scanner.nextInt();
+         
+         System.out.print("A quantidade de horas que o participante participou: ");
+         int horas_participadas = scanner.nextInt();
+         
+         double porcentagem_participacao = (100 * horas_participadas) / horas_total_congresso;
+
+
+         /******************************************************************************************************************************/
+         /**************************************************** Atividade 18 ************************************************************/
          
          System.out.println("""
                     Um congresso vai emitir certificado para um participante se ele estiver presente pelo menos 75%
