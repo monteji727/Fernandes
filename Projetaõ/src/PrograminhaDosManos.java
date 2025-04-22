@@ -25,18 +25,19 @@ public class PrograminhaDosManos {
 	 System.out.println("Leia dois numeros inteiros, calcule a media aritmetica simples entre eles e exiba o valor.");
 
 	 System.out.print("O primeiro valor: "); 
-	 int media_art_val1 = scanner.nextDouble();
+	 int media_art_val1 = scanner.nextInt();
 
 	 System.out.print("O Segundo valor: "); 
-	 int media_art_val2 = scanner.nextDouble();
+	 int media_art_val2 = scanner.nextInt();
 	 
 	 double media_art_result = (double) (media_art_val1 + media_art_val2) / 2.0;
+	 System.out.println("A media fico como: " + media_art_result);
 	
 
          /******************************************************************************************************************************/
          /**************************************************** Atividade 02 ************************************************************/
 	
-	 System.out.println("Leia dois numeros inteiros, calcule a media aritmetica ponderada entre eles, considerando os pesos 2.5 e "+
+	 System.out.println("\nLeia dois numeros inteiros, calcule a media aritmetica ponderada entre eles, considerando os pesos 2.5 e "+
          "3.5,  respectivamente e exiba o valor");
 
 	 System.out.print("O primeiro valor (peso 2.5): ");
@@ -52,7 +53,7 @@ public class PrograminhaDosManos {
          /******************************************************************************************************************************/
          /**************************************************** Atividade 03 ************************************************************/
 
-	 System.out.println("Leia o salario base de um vendador e o valortotal de suas vendas no mes. Calcule o salario final, sabendo " +
+	 System.out.println("\nLeia o salario base de um vendador e o valor total de suas vendas no mes. Calcule o salario final, sabendo " +
 		"que e igual ao valor do salario base adicionado de uma comissao de 15% sobre o valor total de suas vendas");
 
 	 System.out.print("Digite o salario base do vendedor: ");
@@ -62,12 +63,12 @@ public class PrograminhaDosManos {
 	 int vendas_vendedor = scanner.nextInt();
 
 	 double salario_vendedor_total = (vendas_vendedor * (3.0 / 20)) + salario_vendedor_fixo;
-	 System.out.prinln("O salario final foi: " + salario_vendedor_total);
+	 System.out.println("O salario final foi: " + salario_vendedor_total);
 
          /******************************************************************************************************************************/
          /**************************************************** Atividade 04 ************************************************************/
 
-	 System.out.println("Um motorista dirigiu uma distancia, em quilometros, durante um periodo de alguns minutos. Escreva um " + 
+	 System.out.println("\nUm motorista dirigiu uma distancia, em quilometros, durante um periodo de alguns minutos. Escreva um " + 
 		 "algoritmo que solicite esses dois valores e calcule a velocidade media do deslocamento em km/h");
 
 	 System.out.print("A distancia percorriada, em quilometros: ");
@@ -77,13 +78,13 @@ public class PrograminhaDosManos {
 	 double minutos_motorista = scanner.nextDouble();
 
 	 double horas_motorita = minutos_motorista / 60;
-	 double velocidade_motorista = quilometros_motorista / horas_motorista;
+	 double velocidade_motorista = quilometros_motorista / horas_motorita;
 	 System.out.println("A velocidade, em km/h, e de: " + velocidade_motorista);
 
          /******************************************************************************************************************************/
          /**************************************************** Atividade 05 ************************************************************/
 
-	 System.out.println("Um ciclista precidsa percorrer uma distancia, em quilometros, e sabe qual velocidade media vai empreender "+ 
+	 System.out.println("\nUm ciclista precidsa percorrer uma distancia, em quilometros, e sabe qual velocidade media vai empreender "+ 
 		"nesse trecho. Escreva um algoritmo que solicite esses dois valores e calcule o tempo necessario (em horas) para esse " +
 		"deslocamento.");
 
@@ -94,12 +95,12 @@ public class PrograminhaDosManos {
 	 double km_per_ciclista = scanner.nextDouble();
 
 	 double horas_nescessarias = km_per_ciclista / km_h_ciclista;
-	 System.out.println("A quantidade de horas que o trajeto demora sera: " + horas_necessarias);
+	 System.out.println("A quantidade de horas que o trajeto demora sera: " + horas_nescessarias);
 
          /******************************************************************************************************************************/
          /**************************************************** Atividade 06 ************************************************************/
 
-	 System.out.println("Uma patrulha de escoteiros anda numa trilha com uma velocidade aproximadamente constante durante um dado "+
+	 System.out.println("\nUma patrulha de escoteiros anda numa trilha com uma velocidade aproximadamente constante durante um dado "+
 		 "intervalo de tempo. Escreva um algoritmo que, conhecendo a veloidade e o tempo, calcule a distancia percorrida pela "+
 		 "patrulha.");
 
@@ -110,17 +111,175 @@ public class PrograminhaDosManos {
 	 double horas_patrulha = scanner.nextDouble();
 
 	 double caminhos_percorrido_patrulha = (vel_media_patrulha * horas_patrulha);
-	 System.out.println("O tempo gasto foi de (em horas): " + horas_patrulha);
+	 System.out.println("A distancia percorrida foi de (km): " + caminhos_percorrido_patrulha);
 
          /******************************************************************************************************************************/
          /**************************************************** Atividade 07 ************************************************************/
 	
-	System.out.println("Veja no PDF, não vou escrever tudo isso não, pelo amor de Deus.");
+	 System.out.println("\nUm motorista de onibus sabe a distancia total, em quilometros, do techo que deve percorrer durante a " +
+		 "viagem. Ele tambem conhece a velocidade media prevista que deve utilizar durante a viagem. Quando realizoua a " +
+		 "primeira parada para lanche, "+
+		 "ele verificou o intervalo de tempo que ja viajou. Escreva um algoritmo que leia a distancia total da viagem, a " +
+		 "velocidade media prevista, o intervalo (em minutos) da primeira etapa da viagem. Em seguida, calcule e exiba:" +
+		 "\na) O tempo prevista para completar toda a viagem, considerando a distancia total e a velocidade media prevista;" +
+		 "\nb) A distancia efetiva percorrida na primeira etapa, considerando o intervalo informado e a velocidade media prevista;" +
+		 "\nc) A distancia restante que ainda falta percorrer;" +
+		 "\nd) O tempo necessario para percorrer a distancia restante;");
+
+	 System.out.print("Distancia total da viagem (em km): ");
+	 double viagem_km = scanner.nextDouble();
+
+	 System.out.print("Velocidade media da viagem (em km/h): ");
+	 double viagem_velocidade = scanner.nextDouble();
+
+	 System.out.print("O intervalo (em minutos) da primeira etapa da viagem: ");
+	 double viagem_etp1_min = scanner.nextDouble();
+
+	 double viagem_horas = viagem_km / viagem_velocidade;
+	 System.out.println("a) A viagem levara, em horas: " + viagem_horas);
+
+	 double viagem_etp1_horas = (viagem_etp1_min / 60);
+	 double viagem_etp1_km = (viagem_etp1_horas * viagem_velocidade);
+	 System.out.println("b) Na primeira etapa da viagem foram feitos, em quilometros: " + viagem_etp1_km);
+
+	 System.out.println("c) A distancia restante, desconsiderando a primeira etapa, em quilometros: " + (viagem_km - viagem_etp1_km));
+
+	 System.out.println("d) O tempo que falta ainda é, em horas: " + (viagem_horas - viagem_etp1_horas));
+
+         /******************************************************************************************************************************/
+         /**************************************************** Atividade 08 ************************************************************/
+
+	 System.out.println("\nO sistema de metro de uma cidade possui diversas linhas com trajeto fixo. Os trens do metro são automaticos " +
+	 	"e podem ser configurados com uma velocidade media padrao. Em algumas situacoes, e preciso alterar essa velocidade padrao"+
+		", seja por questoes de seguranca, trafego inteso ou reducao no numero de viagens. Escreva um algoritmo que leia a " +
+		"extensao total do trajeto de uma linha, a velocidade media padrao para essas linha e a velocidade media ajustada "+
+		"(quando ocorrem as alteracoes mencionadas). Em seguida calcule e exiba:" +
+		"\na) O tempo previsto para completar a viagem, considerando a extensao total e a velocidade media padrao;" +
+		"\nb) O tempo efetivo para completar a viagem, considerando a extensao total e a velocidade media ajustada;" +
+		"\nc) A diferenca de tempo entra as duas situacoes;" +
+		"\nd) A distancia que e possivel percorrer considerando a velocidade media ajustada e o tempo previsto original;");
+
+		System.out.print("A extensao total do trajeto (em km): ");
+		double trajeto_km = scanner.nextDouble();
+
+		System.out.print("A velocidade media padrao desse trajeto (km/h): ");
+		double trajeto_velocidade = scanner.nextDouble();
+		
+		System.out.print("A velocidade media ajustada desse trajeto (km/h): ");
+		double trajeto_velocidade_ajustada = scanner.nextDouble();
+
+		double tempo_previsto_ideal = trajeto_km / trajeto_velocidade;
+		System.out.println("a) O trajeto e previsto de demorar (horas): " + tempo_previsto_ideal);
+
+		double tempo_efetivo_medio = trajeto_km / trajeto_velocidade_ajustada;
+		System.out.println("b) O tempo efetivo e de (horas): " + tempo_efetivo_medio);
 	
+		System.out.println("c) A diferenca de tempo entre as duas situacoes (horas): " + (Math.abs(tempo_previsto_ideal - tempo_efetivo_medio)));
+		
+		double CANSEI_DE_NOMEAR_PEQUENO_VOU_MUDAR_TUDO_AGORA = tempo_previsto_ideal * trajeto_velocidade_ajustada;
+		System.out.println("d) Leia o que tem ai em cima: " + CANSEI_DE_NOMEAR_PEQUENO_VOU_MUDAR_TUDO_AGORA);
+
+         /******************************************************************************************************************************/
+         /**************************************************** Atividade 09 ************************************************************/
+
+	 System.out.println("\nO piloto de uma aeronave conduz os passageiros e tripulantes por uma rota fixa cuja distancia e sabida. "+
+		"Quando o aviao esta em controle manual, o piloto define a velocidade media de cruzeiro e a mantem aproximadamente "+
+		"constante. Eventualmente, durante uma parte da viagem (em geral no inicio), ele coloca o sistema no piloto automatico, "+
+		"o qual estabelece uma velocidade media automatica, durante um invervalo de tempo fixo. Escreva um algoritmo que leia a "+
+		"extesao da rota, a velocidade media de cruzeiro, a velocidade media automatica e o intevalo de piloto automatico. Em "+
+		"seguida calcule:" +
+		"\na) O tempo previsto para completar a viagem, considerando a extensao da rota e a velocidade media de cruzeiro;" +
+		"\nb) A extensao do trecho voado em piloto automatico, considerando a velocidade media e o intervalo informado;" +
+		"\nc) A diferenca entre a extensao da rota e a extensao do trecho de piloto automatico;" +
+		"\nd) O tempo restante de viagem, considerando o tempo previsto e o intervalo em piloto automatico;" +
+		"\ne) A velocidade media necessaria para completar a extensao do trecho que ainda falta, dentro do tempo restante previsto;");
+	
+	/* 
+	* De agora em diante e so diversao com uma pitada de insanidade, ja estou cansado, entao vou fazendo o que posso para me manter
+	* saudavel mentalmente (to estressado porque fui querer praticar teclado, mas adivinha so, olha O TAMANHO DO TEXTAO... o que nao
+	* é ruim, ja deu para dar uma praticada hoje, hummmmmmm, nao sei porque eu tava brabo nao... kkkkkaskasohiwefóihwepnosvfdspogv)
+	*/
+
+	 System.out.print("A extensao da rota (km): ");
+	 double rotatata189_ = scanner.nextDouble();
+
+	 System.out.print("A velocidade media de cruzeiro (km/h): ");
+	 double otowow = scanner.nextDouble();
+
+	 System.out.print("A velocidade media enquanto em piloto automatico (km/h):");
+	 double ooo1 = scanner.nextDouble();
+
+	 System.out.print("A quantidade de tempo que o piloto automatico foi usado (horas): ");
+	 double que_BUXA = scanner.nextDouble();
+
+
+	 double tempo___QUE_TEMPO_HOME = rotatata189_ / otowow;
+	 System.out.println("a) O tempo previsto, em horas, sem considerar a questao do piloto automatico: " + tempo___QUE_TEMPO_HOME);
+
+	 double MeE__CeEeBrO_dOi__pOnTo_cOm = que_BUXA * ooo1;
+	 System.out.println("b)FALTA TAO POUCO!!! Enfim, o resultado da 'b' deu (horas): " + MeE__CeEeBrO_dOi__pOnTo_cOm);
+
+	 double vai_ter_que_usar = (rotatata189_ - MeE__CeEeBrO_dOi__pOnTo_cOm);
+	 System.out.print("c) A diferenca ficou, em quilometragem a estilo nacional: " + vai_ter_que_usar); 
+	
+	 // Coloca no ponto morto que pelo menos desce a ladeira mais rapido o carro (nao aconselhavel)
+
+	double ahhh_esse_tb = (tempo___QUE_TEMPO_HOME  - que_BUXA);
+	 System.out.print("d) O tempo previsto, retirando o que foi gasto em piloto automatico (horas): " + ahhh_esse_tb);
+
+	 double ha___hahha____HAHAHAHAHAHAAH_HAHSDNLASDLNK = vai_ter_que_usar / ahhh_esse_tb; 
+	 System.out.println("e) A velocidade media que tera que se manter para chegar na hora prevista e de: "+ ha___hahha____HAHAHAHAHAHAAH_HAHSDNLASDLNK );
+
+         /******************************************************************************************************************************/
+         /**************************************************** Atividade 10 ************************************************************/
+	
+	 // FINALMENTE!
+	System.out.println("\nJosevaldo divide seu salario sempre em 11 partes iaguas, e a primeira despesa que paga e o alugues de seu "+
+		"apartamente, Escreva um algoritmo que solicite o valor do salario de Josevaldo(em reais) e quantas partes usa para pagar "+
+		"o aluguel num dado mes. Em seguida calcule:" +
+		"\na) O valor pago (em reais) pelo alugue;" +
+		"\nb) O percentual de seu salario utilizado para pagar o aluguel;");
+
+		System.out.print("Salario do nosso maravilhoso Josevaldo: ");
+		double josevaldo_salario_hehe = scanner.nextDouble();
+
+		System.out.print("Quantas partes, das 11, sao destinadas ao aluguel (inteiro): ");
+		int josevaldo_parte_poque_home = scanner.nextInt();
+		
+		double josevaldo_porcentagem = josevaldo_parte_poque_home / 11.0;
+
+		double josevaldo_aluguel = josevaldo_salario_hehe * josevaldo_porcentagem;
+
+		System.out.println("\nVamos por partes, hahahahaha");
+		System.out.println("a) O valor pago de aluguel, em reais: " + josevaldo_aluguel);
+		System.out.println("b) A porcentagem gasta do salario em alguel: " + (100 * josevaldo_porcentagem) + "%");
+
+         /******************************************************************************************************************************/
+         /**************************************************** Atividade 11 ************************************************************/
+
+	 // Quase me esqueci desse kkkkk, quase fui dormir sem fazer......... ;-; não sei se queria ter lembrado nao
+
+	System.out.println("\nNeusimaria comprou uma certa quantidade de carne para fazer um churrasco com a familia. Contudo, ela "+
+		"esqueceu de verificar o preco do quilograma, e sabe apensa o quanto pagou pelo total da quantidade comprada. Escreva "+
+		"um algoritmo que solicite a quantidade (em quilogramas) comprada, e o valor pago, informando qual e o valor por quilo");
+
+	// EASY PEACEI (é assim que se escreve, confia)
+
+	System.out.print("Digite a quantidade de quilogramas de caaaaaaaaaarrne... yum!... compradas: ");
+	double carnezinha_faz_tchan_kg = scanner.nextDouble();
+
+	System.out.print("Digite o quanto que foi gasto, em reais, por todos esses quilos de caaaaaaaaarne.... ok, parei. Escreve ai: ");
+	double com_dinheiro_nao_brinca = scanner.nextDouble();
+
+
+	double respostinha_na_manga = com_dinheiro_nao_brinca / carnezinha_faz_tchan_kg ;
+	double heheheheha = 1 / respostinha_na_manga; // Pode perder um pouco de precisao, mas e bem mais interessante, kkkkkkkkkk
+	System.out.println("MEU chapa, com toda a  facilidade do universo, digo-lhe que o custo de cada quilograma de carne que "+
+		"foi comprado e de (em reais ainda): " + heheheheha );
 
          /******************************************************************************************************************************/
          /**************************************************** Atividade 12 ************************************************************/
-        
+
          System.out.println("""
                     Uma empresa de produtos esportivos realizar\u00e1 uma a\u00e7\u00e3o de marketing que consiste em
                     instalar  uma tirolesa entre os dois pr\u00e9dios do centro da cidade. Conhecendo a altura (em metros) dos
@@ -273,19 +432,5 @@ public class PrograminhaDosManos {
 
          /******************************************************************************************************************************/
          /**************************************************** Atividade 18 ************************************************************/
-         
-         System.out.println("""
-                    Um congresso vai emitir certificado para um participante se ele estiver presente pelo menos 75%
-                    das horas. O usu\u00e1rio vai informar quantas horas tem o congresso no total e quantas horas o
-                    participante compareceu. O n\u00famero de horas \u00e9 sempre inteiro."""
-         );
-         
-         System.out.print("A quantidade de horas total do congresso (somente inteiros): ");
-         int horas_total_congresso = scanner.nextInt();
-         
-         System.out.print("A quantidade de horas que o participante participou: ");
-         int horas_participadas = scanner.nextInt();
-         
-         double porcentagem_participacao = (100 * horas_participadas) / horas_total_congresso;
     }
 }
