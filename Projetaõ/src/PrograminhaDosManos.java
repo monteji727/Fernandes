@@ -465,7 +465,16 @@ public class PrograminhaDosManos {
 	int tempo_minutos = (quantidade_de_segundos % 3600) / 60;
 	int tempo_horas = (quantidade_de_segundos % (60*60*24) / 3600;
 	int tempo_dias = quantidade_de_segundos / (3600 * 24);
-	
+
+	String final_hahahhah = tempo_dias + "-" + tempo_horas + ":" + tempo_minutos + ":" + tempo_segundos;
+	System.out.println("O tempo final ficou o seguinte: " + final_hahahhah);
+
+
+         /******************************************************************************************************************************/
+         /**************************************************** Atividade 22 ************************************************************/
+
+	System.out.println("\r\nLeia 4 valores inteiros A, B, C e D. Em seguida, se B for maiordo que C e se D for maior do que A, e a soma de C com D for maior que a soma de A e B e se C e D, ambos, fores positivos e se a variavel A for par escrever a mensagem \"Valores aceitos\", senao escrever \"Valores nao aceitos\"");
+
 	
 
     }
