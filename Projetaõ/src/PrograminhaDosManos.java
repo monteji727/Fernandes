@@ -432,50 +432,221 @@ public class PrograminhaDosManos {
          /******************************************************************************************************************************/
          /**************************************************** Atividade 18 ************************************************************/
 	
-	 System.out.println("\r\nVladislau quer calcular o frete de uma encomenda, apos informar o valor total comprado. Se o valor for inferior a R$120,00, o frete sera "+ 
-	"igual a R$15,00; do contrario, esta isento do valor do frete. Informe o valor total a ser cobrado, incluindo o frete.");
-	System.out.print("Insira o valor total comprado: ");
-	double valor_total_sem_frete = scanner.nextDouble();
+		System.out.println("\r\nVladislau quer calcular o frete de uma encomenda, apos informar o valor total comprado. Se o valor for inferior a R$120,00, o frete sera "+ 
+		"igual a R$15,00; do contrario, esta isento do valor do frete. Informe o valor total a ser cobrado, incluindo o frete.");
+		System.out.print("Insira o valor total comprado: ");
+		double valor_total_sem_frete = scanner.nextDouble();
 	
 
-	double valor_total_c_frete = valor_total_sem_frete + ((valor_total_sem_frete >=120) ? (15) : (0));
-	System.out.println("O valor total, com frete, é: R$" + valor_total_c_frete);
+		double valor_total_c_frete = valor_total_sem_frete + ((valor_total_sem_frete >=120) ? (15) : (0));
+		System.out.println("O valor total, com frete, é: R$" + valor_total_c_frete);
 
          /******************************************************************************************************************************/
          /**************************************************** Atividade 19 e 20 ************************************************************/
 
-	System.out.println("\r\nEscreva um algoritmo que solicite a digitacao de um ano. Com base nessa informacao, deve-se usar a regra simples para indicar se o ano e vissexto: seja divisivel po 4. Informe ao dinal se o ano e ou nao bissexto.");
+		System.out.println("\r\nEscreva um algoritmo que solicite a digitacao de um ano. Com base nessa informacao, deve-se usar a regra simples para indicar se o ano e vissexto: seja divisivel po 4. Informe ao dinal se o ano e ou nao bissexto.");
 
-	System.out.print("Digite o ano que se deseja ver se e bissexto: ");
-	int ano_input_nome_longo_sem_motivo = scanner.nextInt();
+		System.out.print("Digite o ano que se deseja ver se e bissexto: ");
+		int ano_input_nome_longo_sem_motivo = scanner.nextInt();
 
-	bool se_e_bissexto_true = ((ano_input_nome_longo_sem_motivo % 4 == 0) && !(ano_input_nome_longo_sem_motivo % 25 == 0)) || (ano_input_nome_longo_sem_motivo % 16 == 0);
+		bool se_e_bissexto_true = ((ano_input_nome_longo_sem_motivo % 4 == 0) && !(ano_input_nome_longo_sem_motivo % 25 == 0)) || (ano_input_nome_longo_sem_motivo % 16 == 0);
 
-	System.out.println("O ano digitado e Bissexto? A resposta e: " + (se_e_bissexto_true ? "verdade" : "falso"));
+		System.out.println("O ano digitado e Bissexto? A resposta e: " + (se_e_bissexto_true ? "verdade" : "falso"));
 
          /******************************************************************************************************************************/
          /**************************************************** Atividade 21 ************************************************************/
 
-	System.out.println("Leia um valor inteiro, que e o tempo de duracao em segundos de um determinado evento em um laboratorio, e informe-o expresso no formato dias-horas:minutos:segundos.");
-	
-	System.out.print("Digite a quantidade de segundos: ");
-	int quantidade_de_segundos = scanner.nextInt();
+		System.out.println("Leia um valor inteiro, que e o tempo de duracao em segundos de um determinado evento em um laboratorio, e informe-o expresso no formato dias-horas:minutos:segundos.");
+		
+		System.out.print("Digite a quantidade de segundos: ");
+		int quantidade_de_segundos = scanner.nextInt();
 
-	int tempo_segundos = (quantidade_de_segundos % 60);
-	int tempo_minutos = (quantidade_de_segundos % 3600) / 60;
-	int tempo_horas = (quantidade_de_segundos % (60*60*24) / 3600;
-	int tempo_dias = quantidade_de_segundos / (3600 * 24);
+		int tempo_segundos = (quantidade_de_segundos % 60);
+		int tempo_minutos = (quantidade_de_segundos % 3600) / 60;
+		int tempo_horas = (quantidade_de_segundos % (3600*24) / 3600);
+		int tempo_dias = quantidade_de_segundos / (3600 * 24);
 
-	String final_hahahhah = tempo_dias + "-" + tempo_horas + ":" + tempo_minutos + ":" + tempo_segundos;
-	System.out.println("O tempo final ficou o seguinte: " + final_hahahhah);
+		String final_hahahhah = tempo_dias + "-" + tempo_horas + ":" + tempo_minutos + ":" + tempo_segundos;
+		System.out.println("O tempo final ficou o seguinte: " + final_hahahhah);
 
 
          /******************************************************************************************************************************/
          /**************************************************** Atividade 22 ************************************************************/
 
-	System.out.println("\r\nLeia 4 valores inteiros A, B, C e D. Em seguida, se B for maiordo que C e se D for maior do que A, e a soma de C com D for maior que a soma de A e B e se C e D, ambos, fores positivos e se a variavel A for par escrever a mensagem \"Valores aceitos\", senao escrever \"Valores nao aceitos\"");
+		System.out.println("\r\nLeia 4 valores inteiros A, B, C e D. Em seguida, se B for maior do que C e se D for maior do que A, e a soma de C com D for maior que a soma de A e B e se C e D, ambos, fores positivos e se a variavel A for par escrever a mensagem \"Valores aceitos\", senao escrever \"Valores nao aceitos\"");
 
+		System.out.print("Digita os numeros ai mano: ");
+		int A = scanner.nextInt();
+		int B = scanner.nextInt();
+		int C = scanner.nextInt();
+		int D = scanner.nextInt();
+
+		String situacao_mermao;
+
+		if((B > C) && (D > A) && ((C + D) > (A + B)) && (C >= 0) && (D >= 0) && (A%2 == 0)){
+			situacao_mermao = "Aceito"
+;		} else {
+			situacao_mermao = "Desaceito"          ;
+		}
+
+		System.out.println("Mano, o seu conjunto de numeros foi: " + situacao_mermao);
+
+		 /******************************************************************************************************************************/
+         /**************************************************** Atividade 23 ************************************************************/
+
+		 System.out.println("\r\nDigite os tres coeficientes usados por cada variavel ((1°)*x^2 + (2°)*x^1 + (3°)*x^0 == 0)");
+		 double coef1 = scanner.nextDouble();
+		 double coef2 = scanner.nextDouble();
+		 double coef3 = scanner.nextDouble();
+
+		 String string_resultado = "O resultado foi o seguinte: ";
+
+		 if (coef1 == 0.0) {
+			string_resultado += "\r\n\tNao e uma equacao do 2o grau";
+			System.out.print(string_resultado);
+			return;
+		 }
+
+		 if ((coef2==0) && (coef3 == 0)) {
+			string_resultado += "\r\n\tEquacao Incompleta";
+		 } else {
+			string_resultado += "\r\n\tEquacao Completa"
+		 }
+
+		 double delta = (coef2*coef2 - 4*coef1*coef3)
+		 string_resultado += "\r\n\tO valor de delta foi: " + delta;
+
+		//Pi e trancendental, nao pode ser resposta para uma equacao de grau 2
+		double raiz_n = -coef2 / (2.0 * coef1); 
+		if (delta == 0) {
+			string_resultado += "\r\n\tHa uma rais para a equacao";
+			string_resultado += "\r\tRaiz: " + raiz_n;
+		} else if (delta > 0) {
+			string_resultado += "\r\n\tHa duas raizes";
+			raiz_n += Math.sqrt(delta)/ (2.0 * coef1);
+			string_resultado += "\r\tRaiz: " + raiz_n;
+
+			raiz_n -= Math.sqrt(delta)/ (2.0 * coef1);
+			string_resultado += "\r\tRaiz: " + raiz_n;
+		} else {
+			string_resultado += "\r\n\tNao ha raizes reais para a equacao";
+		}
+
+		System.out.println(string_resultado);
+
+		 /******************************************************************************************************************************/
+         /**************************************************** Atividade 24 ************************************************************/
+		 
+		 System.out.println("Digite um numero e direi em que intervalo ele esta..., desde que esteja entre 0 e 100, incluindo eles (pode ter ponto decimal, OK?!)");
+
+		 System.out.print("O numero escolhido: ");
+		 double numero_intervalo = scanner.nextDouble();
+
+		 if (numero_intervalo < 0.0 || numero_intervalo > 100.0) {
+			string_resultado = "Fora de intervalo";
+		 } else if (numero_intervalo <= 25) {
+			string_resultado = "[0,25]";
+		 } else if (numero_intervalo <= 50) {
+			string_resultado = "(25,50]";
+		 } else if (numero_intervalo <= 75) {
+			string_resultado = "(50,75]";
+		 } else if (numero_intervalo <= 100) {
+			string_resultado = "(75,100]"
+		 }
+
+		 System.out.println(string_resultado);
+
+		 /******************************************************************************************************************************/
+         /**************************************************** Atividade 25 ************************************************************/
+
+		 System.out.println("Exercicio 25 agora, desculpa, mas ja estou bem impaciente.");
+
+		 System.out.print("Digite o valor de X: ");
+		 double x_coordenada = scanner.nextDouble();
+
+		 System.out.print("Digite o valor de Y: ");
+		 double y_coordenada = scanner.nextDouble();
+		 
+		 // WTF... mas funciona. Ja estou a ponto de comecar a fazer so pra dar risada, como da pra ver
+		 int quadrante = (x > 0)*1 + (x < 0)*2 + (y < 0)*3; // Esse tipo de codigo e o que eu mais odeio...
 	
+		 System.out.println("O quadrante onde isso se encontra e o: "+quadrante+"°");
+	
+		 /******************************************************************************************************************************/
+         /**************************************************** Atividade 26 e 27 *******************************************************/
 
-    }
+		 System.out.println("\r\nLendo tres valores reais, bora! (26)");
+
+		 System.out.println("Digite os tres numeros, por um favor: ");
+		 double valor1 = scanner.nextDouble();
+		 double valor2 = scanner.nextDouble();
+		 double valor3 = scanner.nextDouble();
+
+
+		 // Ordenacao decrescente
+		 double tmp;
+
+		 tmp = valor1;
+		 valor1 = Math.max(tmp, valor2);
+		 valor2 = Math.min(tmp, valor2);
+
+		 tmp = valor2;
+		 valor2 = Math.max(tmp, valor3);
+		 valor3 = Math.min(tmp, valor3);
+
+		 tmp = valor1;
+		 valor1 = Math.max(tmp, valor2);
+		 valor2 = Math.min(tmp, valor2);
+
+		 double valor1_2 = valor1*valor1;
+		 double valor2_2 = valor2*valor2;
+		 double valor3_2 = valor3*valor3;
+
+		 if (valor1 >= valor2 + valor3)
+		 	string_resultado = "nao e um triangulo";
+		else if (valor1_2 < valor2_2 + valor3_2) 
+		 	string_resultado = "e um triangulo acutangulo";
+		else if (valor1_2 > valor2_2 + valor3_2)
+		 	string_resultado = "e um triangulo obtusangulo";
+		else
+		 	string_resultado = "e um tiruangulo retangulo";
+
+		 
+		 /******************************************************************************************************************************/
+         /**************************************************** Atividade 28 ************************************************************/
+		 
+		 System.out.println("\r\nDigite um numero inteiro ai pra eu dar uma olhada(28): ");
+		 int num_testado = scanner.nextInt();
+		 
+		 if (num_testado == 0) {
+			string_resultado = "\r\n\tO numero e zero";
+		 } else {
+			if (num_testado > 0)
+				string_resultado = "\r\n\tO numero e positivo";
+			else
+				string_resultado = "\r\n\tO numero e negativo";
+			
+			string_resultado += ((num_testado%2) == 0) ? "\r\n\tO numero e par" : "O numero e impar";
+		 }
+
+		System.out.println(string_resultado);
+		
+		 /******************************************************************************************************************************/
+         /**************************************************** Atividade 29 ************************************************************/
+
+		 "+========+========+\r\n" +
+		 "| Codigo | Classe |\r\n" +
+		 "+========+========+\r\n" +
+		 "| 1      |        |\r\n" +
+		 "+========+========+\r\n" +
+		 "| 2      |        |\r\n" +
+		 "+========+========+\r\n" +
+
+
+
+		 /******************************************************************************************************************************/
+         /**************************************************** Atividade 30 ************************************************************/
+
+		 
+	}
 }
